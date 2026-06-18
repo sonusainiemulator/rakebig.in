@@ -82,9 +82,13 @@ export default function Footer() {
           <p className="text-slate-500 text-sm">
             © {new Date().getFullYear()} RakeBig.in — All rights reserved.
           </p>
-          <p className="text-slate-600 text-xs">
-            Built with Next.js · Framer Motion · Tailwind CSS
-          </p>
+          <div className="flex items-center gap-4">
+            <a href="/privacy" className="text-slate-600 hover:text-indigo-400 text-xs transition-colors">Privacy Policy</a>
+            <span className="text-slate-700 text-xs">·</span>
+            <a href="/terms" className="text-slate-600 hover:text-indigo-400 text-xs transition-colors">Terms &amp; Conditions</a>
+            <span className="text-slate-700 text-xs">·</span>
+            <p className="text-slate-600 text-xs">Built with Next.js · Framer Motion · Tailwind CSS</p>
+          </div>
         </div>
       </div>
     </footer>
