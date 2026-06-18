@@ -34,10 +34,12 @@ const services = [
 ];
 
 const links = [
-  { label: "Services", href: "#services" },
-  { label: "Process", href: "#process" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/#services" },
+  { label: "Process", href: "/#process" },
+  { label: "Why Us", href: "/#why-us" },
+  { label: "Contact", href: "/#contact" },
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms & Conditions", href: "/terms" },
 ];
 
 export default function Footer() {
