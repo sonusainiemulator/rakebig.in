@@ -1,6 +1,29 @@
 "use client";
 
-import { Bot, ExternalLink, Globe, Link2, Mail } from "lucide-react";
+import { Bot, Twitter, Linkedin, Instagram, Github } from "lucide-react";
+
+const socials = [
+  {
+    label: "X (Twitter)",
+    href: "https://x.com/rakebig",
+    icon: Twitter,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/company/rakebig",
+    icon: Linkedin,
+  },
+  {
+    label: "Instagram",
+    href: "https://instagram.com/rakebig.in",
+    icon: Instagram,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/sonusainiemulator",
+    icon: Github,
+  },
+];
 
 const services = [
   "AI Agent Deployment",
@@ -36,11 +59,14 @@ export default function Footer() {
               Your trusted partner for AI agent deployment, automation, voice AI,
               and open-source project hosting. We make AI work for your business.
             </p>
-            <div className="flex gap-4 mt-6">
-              {[Globe, ExternalLink, Link2, Mail].map((Icon, i) => (
+            <div className="flex gap-3 mt-6">
+              {socials.map(({ label, href, icon: Icon }) => (
                 <a
-                  key={i}
-                  href="#"
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
                   className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:border-indigo-500/50 transition-all duration-200"
                 >
                   <Icon className="w-4 h-4" />
@@ -87,7 +113,7 @@ export default function Footer() {
             <span className="text-slate-700 text-xs">·</span>
             <a href="/terms" className="text-slate-600 hover:text-indigo-400 text-xs transition-colors">Terms &amp; Conditions</a>
             <span className="text-slate-700 text-xs">·</span>
-            <p className="text-slate-600 text-xs">Built with Next.js · Framer Motion · Tailwind CSS</p>
+            <p className="text-slate-600 text-xs">Powered by <span className="gradient-text font-semibold">RakeBig</span> Services</p>
           </div>
         </div>
       </div>
